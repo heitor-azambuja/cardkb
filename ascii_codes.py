@@ -1,7 +1,7 @@
 import uinput
 
 ascii = {
-  # number row
+    # number row
     0x1B: [uinput.KEY_ESC],
     0x31: [uinput.KEY_1],
     0x32: [uinput.KEY_2],
@@ -14,8 +14,9 @@ ascii = {
     0x39: [uinput.KEY_9],
     0x30: [uinput.KEY_0],
     0x08: [uinput.KEY_BACKSPACE],
+    0x7F: [uinput.KEY_DELETE],  # shift + backspace on cardkb
 
-  # top row
+    # top row
     0x09: [uinput.KEY_TAB],
     0x71: [uinput.KEY_Q],
     0x77: [uinput.KEY_W],
@@ -28,7 +29,7 @@ ascii = {
     0x6F: [uinput.KEY_O],
     0x70: [uinput.KEY_P],
 
-  # home row
+    # home row
     0x61: [uinput.KEY_A],
     0x73: [uinput.KEY_S],
     0x64: [uinput.KEY_D],
@@ -40,7 +41,7 @@ ascii = {
     0x6C: [uinput.KEY_L],
     0x0D: [uinput.KEY_ENTER],
 
-  # bottom row
+    # bottom row
     0x7A: [uinput.KEY_Z],
     0x78: [uinput.KEY_X],
     0x63: [uinput.KEY_C],
@@ -52,7 +53,7 @@ ascii = {
     0x2E: [uinput.KEY_DOT],
     0x20: [uinput.KEY_SPACE],
 
-  # arrow keys
+    # arrow keys
     0xB4: [uinput.KEY_LEFT],
     0xB5: [uinput.KEY_UP],
     0xB6: [uinput.KEY_DOWN],
@@ -76,7 +77,7 @@ ascii = {
     0x5B: [uinput.KEY_LEFTBRACE],
     0x5D: [uinput.KEY_RIGHTBRACE],
     0x2f: [uinput.KEY_SLASH],
-    0x5C: [uinput.KEY_BACKSLASH], 
+    0x5C: [uinput.KEY_BACKSLASH],
     0x7C: [uinput.KEY_LEFTSHIFT, uinput.KEY_BACKSLASH],
     0x7E: [uinput.KEY_LEFTSHIFT, uinput.KEY_GRAVE],
     0x27: [uinput.KEY_APOSTROPHE],
@@ -125,4 +126,61 @@ ascii = {
     0x42: [uinput.KEY_LEFTSHIFT, uinput.KEY_B],
     0x4E: [uinput.KEY_LEFTSHIFT, uinput.KEY_N],
     0x4D: [uinput.KEY_LEFTSHIFT, uinput.KEY_M],
+
+    # fn key combinations first row
+    0x80: [uinput.KEY_F12],  # esc
+    0x81: [uinput.KEY_F1],
+    0x82: [uinput.KEY_F2],
+    0x83: [uinput.KEY_F3],
+    0x84: [uinput.KEY_F4],
+    0x85: [uinput.KEY_F5],
+    0x86: [uinput.KEY_F6],
+    0x87: [uinput.KEY_F7],
+    0x88: [uinput.KEY_F8],
+    0x89: [uinput.KEY_F9],
+    0x8A: [uinput.KEY_F10],
+    0x8B: [uinput.KEY_F11],  # backspace
+
+    # fn key combinations second row
+    0x8C: [uinput.KEY_INSERT],  # tab key
+    0x8D: [uinput.KEY_LEFTCTRL, uinput.KEY_Q],
+    0x8E: [uinput.KEY_LEFTCTRL, uinput.KEY_W],
+    0x8F: [uinput.KEY_LEFTCTRL, uinput.KEY_E],
+    0x90: [uinput.KEY_LEFTCTRL, uinput.KEY_R],
+    0x91: [uinput.KEY_LEFTCTRL, uinput.KEY_T],
+    0x92: [uinput.KEY_LEFTCTRL, uinput.KEY_Y],
+    0x93: [uinput.KEY_LEFTCTRL, uinput.KEY_U],
+    0x94: [uinput.KEY_LEFTCTRL, uinput.KEY_I],
+    0x95: [uinput.KEY_LEFTCTRL, uinput.KEY_O],
+    0x96: [uinput.KEY_LEFTCTRL, uinput.KEY_P],
+    # 0x97: [uinput.KEY_],  # no key
+
+    # fn key combinations third row
+    0x98: [uinput.KEY_HOME],  # LEFT
+    0x99: [uinput.KEY_PAGEUP],  # UP
+    0x9A: [uinput.KEY_LEFTCTRL, uinput.KEY_A],
+    0x9B: [uinput.KEY_LEFTCTRL, uinput.KEY_S],
+    0x9C: [uinput.KEY_LEFTCTRL, uinput.KEY_D],
+    0x9D: [uinput.KEY_LEFTCTRL, uinput.KEY_F],
+    0x9E: [uinput.KEY_LEFTCTRL, uinput.KEY_G],
+    0x9F: [uinput.KEY_LEFTCTRL, uinput.KEY_H],
+    0xA0: [uinput.KEY_LEFTCTRL, uinput.KEY_J],
+    0xA1: [uinput.KEY_LEFTCTRL, uinput.KEY_K],
+    0xA2: [uinput.KEY_LEFTCTRL, uinput.KEY_L],
+    # 0xA3: [uinput.KEY_],  # enter
+
+    # fn key combinations fourth row
+    0xA4: [uinput.KEY_PAGEDOWN],  # DOWN
+    0xA5: [uinput.KEY_END],  # RIGHT
+    0xA6: [uinput.KEY_LEFTCTRL, uinput.KEY_Z],
+    0xA7: [uinput.KEY_LEFTCTRL, uinput.KEY_X],
+    0xA8: [uinput.KEY_LEFTCTRL, uinput.KEY_C],
+    0xA9: [uinput.KEY_LEFTCTRL, uinput.KEY_V],
+    0xAA: [uinput.KEY_LEFTCTRL, uinput.KEY_B],
+    0xAB: [uinput.KEY_LEFTCTRL, uinput.KEY_N],
+    0xAC: [uinput.KEY_LEFTCTRL, uinput.KEY_M]
+    # 0xAD: [uinput.KEY_],  # comma
+    # 0xAE: [uinput.KEY_],  # dot
+    # 0xAF: [uinput.KEY_],  # space
+
 }
